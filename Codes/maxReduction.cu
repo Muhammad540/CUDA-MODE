@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <cuda_runtime.h>
 
-#define MAX_VAL -INFINITY  // Changed to negative infinity for finding maximum
+#define MAX_VAL -INFINITY  // we need a very low max val for comparison so i chose -inf, just choose any value that is smaller than all the values in the data you're working with
 
 // !!CUDA DOES NOT SUPPORT ATOMIC MAX FOR FLOATS !!
 // !!SO I FOUND THIS SOLUTION ON STACK OVERFLOW: https://stackoverflow.com/questions/17399119/how-do-i-use-atomicmax-on-floating-point-values-in-cuda !!
