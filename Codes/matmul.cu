@@ -67,8 +67,8 @@ int main(void){
     dim3 threadsPerBlock(32,32,1);
     // x -> width of block (K)
     // y -> height of block (M)
-    dim3 blocksPerGrid((K+threadsPerBlock.x-1)/threadsPerBlock.x,
-                       (M+threadsPerBlock.y-1)/threadsPerBlock.y,
+    dim3 blocksPerGrid((K+threadsPerBlock.y-1)/threadsPerBlock.y,
+                       (M+threadsPerBlock.x-1)/threadsPerBlock.x,
                        1);
     matMul<int><<<blocksPerGrid,threadsPerBlock>>>(A_d,B_d,C_d,M,N,K);
 
