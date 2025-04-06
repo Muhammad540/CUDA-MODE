@@ -61,8 +61,8 @@ int  main(void){
     Image *grayed_image_h = new Image[width * height];
     Image *grayed_image_d;
     // since we cannot pass a vector, flatten out the image into an array 
-    for (int y=0;y<height;y++){
-        for (int x=0;x<width;x++){
+    for (int y=0;y<height;y++){ // go over the rows 
+        for (int x=0;x<width;x++){ // go over the cols
             flattened_image_h[y*width+x]=colouredimage[y][x];
         }
     }
